@@ -1,0 +1,26 @@
+[
+    {
+        "id": "0af7fffe-4fa6-46c1-9403-ea4f696a1544",
+        "username": "Elina",
+        "age": 30,
+        "hobbies": [
+            "coding"
+        ]
+    },
+    {
+        "id": "3f9a760a-d79f-43a2-bb1a-24dd62da433c",
+        "username": "Anton",
+        "age": 30,
+        "hobbies": [
+            "coding"
+        ]
+    },
+    {
+        "id": "c33b19a2-9ad6-4c7e-a08a-c127090e165c",
+        "username": "Marina",
+        "age": 30,
+        "hobbies": [
+            "coding"
+        ]
+    }
+]

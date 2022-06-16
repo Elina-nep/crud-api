@@ -8,7 +8,7 @@ export const writeDataToFile = (filename: string, content: IUser[]) => {
   const resolvedPath = path.resolve(filename);
   const writeInFileStream = fs.createWriteStream(resolvedPath);
   console.log(resolvedPath);
-  writeInFileStream.write(JSON.stringify(content));
+  writeInFileStream.write(JSON.stringify(content, null, 4));
   writeInFileStream.close();
   writeInFileStream.on("error", (err) => {
     console.log(err);

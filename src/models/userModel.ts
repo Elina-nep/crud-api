@@ -1,7 +1,17 @@
 import { v4 as uuidv4 } from "uuid";
-import { users } from "../data/users";
+import fs from "fs";
+// import { users } from "../data/users";
+import users from "../data/users.json";
 import { IPostUser, IUser } from "../types/user";
 import { writeDataToFile } from "../utils";
+
+// const users = JSON.parse(
+//   fs.readFile('./data/user.json')
+// );
+
+// const users: IUser[] = JSON.parse(
+//   import("../data/user.json", { assert: { type: "json" } }).toString()
+// );
 
 export const findAll: () => Promise<IUser[]> = () => {
   return new Promise((res, rej) => {
@@ -20,9 +30,9 @@ export const findById: (arg0: string) => Promise<IUser> = (id) => {
 
 export const create: (arg0: IPostUser) => Promise<IUser> = (user) => {
   return new Promise((res, rej) => {
-    const newUser = { ...user, id: uuidv4() };
+    const newUser = { id: uuidv4(), ...user };
     users.push(newUser);
-    writeDataToFile("src/data/user.json", users);
+    writeDataToFile("src/data/users.json", users);
     res(newUser);
   });
 };
