@@ -1,13 +1,5 @@
 [
     {
-        "id": "0af7fffe-4fa6-46c1-9403-ea4f696a1544",
-        "username": "Elina",
-        "age": 30,
-        "hobbies": [
-            "coding"
-        ]
-    },
-    {
         "id": "3f9a760a-d79f-43a2-bb1a-24dd62da433c",
         "username": "Anton",
         "age": 30,
@@ -19,6 +11,30 @@
         "id": "c33b19a2-9ad6-4c7e-a08a-c127090e165c",
         "username": "Marina",
         "age": 30,
+        "hobbies": [
+            "coding"
+        ]
+    },
+    {
+        "id": "56b0280b-70b0-4922-ab8b-8b13c703a53f",
+        "username": "Elina",
+        "age": 29,
+        "hobbies": [
+            "coding"
+        ]
+    },
+    {
+        "id": "aa3298bb-cd81-482e-b813-4aadfe1d4093",
+        "username": "Elina1",
+        "age": 29,
+        "hobbies": [
+            "coding"
+        ]
+    },
+    {
+        "id": "6fd42585-8564-4503-967b-9d32e4b980b4",
+        "username": "Elina2",
+        "age": 29,
         "hobbies": [
             "coding"
         ]

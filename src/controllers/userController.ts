@@ -56,3 +56,52 @@ export const createUser = async (
     console.log(err);
   }
 };
+
+export const updateUser = async (
+  req: http.IncomingMessage,
+  res: http.ServerResponse,
+  id: string
+) => {
+  try {
+    const user: IUser = await Users.findById(id);
+    if (!user) {
+      res.writeHead(404, { "Content-Type": "text/html" });
+      res.end(JSON.stringify({ message: "User not found" }));
+    } else {
+      const body = await getPostData(req);
+      const { username, age, hobbies }: IPostUser = JSON.parse(body);
+
+      const userUpdated: IPostUser = {
+        username: username || user.username,
+        age: age || user.age,
+        hobbies: hobbies || user.hobbies,
+      };
+
+      const updUser: IUser = await Users.update(userUpdated, id);
+      res.writeHead(201, { "Content-Type": "application/json" });
+      res.end(JSON.stringify(updUser));
+    }
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+export const deleteUser = async (
+  req: http.IncomingMessage,
+  res: http.ServerResponse,
+  id: string
+) => {
+  try {
+    const user: IUser = await Users.findById(id);
+    if (!user) {
+      res.writeHead(404, { "Content-Type": "text/html" });
+      res.end(JSON.stringify({ message: "User not found" }));
+    } else {
+      await Users.remove(id);
+      res.writeHead(204, { "Content-Type": "application/json" });
+      res.end(JSON.stringify({ message: `User ${id} was removed` }));
+    }
+  } catch (err) {
+    console.log(err);
+  }
+};
