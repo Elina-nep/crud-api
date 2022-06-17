@@ -2,7 +2,7 @@ import fs from "fs";
 import * as http from "http";
 import { fileURLToPath } from "url";
 import * as path from "path";
-import { IPostUser, IUser } from "./types/user";
+import { IPostUser, IUser } from "../types/user";
 
 export const writeDataToFile = (filename: string, content: IUser[]) => {
   const resolvedPath = path.resolve(filename);

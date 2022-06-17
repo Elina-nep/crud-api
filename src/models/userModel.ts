@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
 import users from "../data/users.json";
 import { IPostUser, IUser } from "../types/user";
-import { writeDataToFile } from "../utils";
+import { writeDataToFile } from "../helpers/utils";
 
 export const findAll: () => Promise<IUser[]> = () => {
   return new Promise((res, rej) => {
