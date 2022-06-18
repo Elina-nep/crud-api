@@ -8,7 +8,7 @@ import {
   deleteUser,
 } from "./controllers/userController";
 
-const server = http.createServer(
+export const server = http.createServer(
   (req: http.IncomingMessage, res: http.ServerResponse) => {
     if (req.url === "/api/users" && req.method === "GET") {
       getUsers(req, res);

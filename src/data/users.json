@@ -22,29 +22,5 @@
         "hobbies": [
             "coding"
         ]
-    },
-    {
-        "id": "aa3298bb-cd81-482e-b813-4aadfe1d4093",
-        "username": "Elina1",
-        "age": 29,
-        "hobbies": [
-            "coding"
-        ]
-    },
-    {
-        "id": "6fd42585-8564-4503-967b-9d32e4b980b4",
-        "username": "Elina2",
-        "age": 29,
-        "hobbies": [
-            "coding"
-        ]
-    },
-    {
-        "id": "1ad59fa5-e524-4cb9-947b-fd633cf5b648",
-        "username": "Marina",
-        "age": 27,
-        "hobbies": [
-            "coding"
-        ]
     }
 ]
