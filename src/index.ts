@@ -1,4 +1,5 @@
 import * as http from "http";
+import "dotenv/config";
 import {
   getUsers,
   getUserById,
@@ -42,6 +43,7 @@ const server = http.createServer(
 );
 
 const PORT: number = +process.env.PORT! || 4000;
+process.env.PORT = String(PORT);
 
 server.listen(PORT, () => {
   console.log("Server running on port", PORT);
