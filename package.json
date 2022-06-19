@@ -6,7 +6,8 @@
   "scripts": {
     "test": "npx jest --detectOpenHandles",
     "start:dev": "nodemon",
-    "start:prod": "webpack --mode production & node dist/index.bundle.js"
+    "start:prod": "webpack --mode production && node dist/index.bundle.js",
+    "start:multi": "webpack --mode production && node dist/index.bundle.js --multi"
   },
   "repository": {
     "type": "git",

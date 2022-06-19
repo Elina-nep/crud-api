@@ -4,6 +4,8 @@
 
 #### to run in developer mode: npm run start:prod
 
+#### to run in multi server mode: npm run start:multi
+
 #### to run tests: npm run test
 
 Please, check the app using postman
