@@ -22,6 +22,7 @@ describe("scenario1 basic", () => {
 
   it("GET api/user/{userId} gives record by its id", async () => {
     const response = await request(server).get(`/api/users/${id}`);
+
     expect(response.statusCode).toBe(200);
     expect(
       response.body.username &
